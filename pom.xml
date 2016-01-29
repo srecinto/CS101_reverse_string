@@ -12,13 +12,6 @@
     <build>
       <finalName>ir-cs101-string-reverse</finalName>
       
-      <resources>
-        <resource>
-          <directory>src/test/resources</directory>
-          <filtering>true</filtering> 
-        </resource>
-      </resources>
-      
       <pluginManagement>
         <plugins>
           <plugin>
