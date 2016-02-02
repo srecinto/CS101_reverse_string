@@ -6,7 +6,6 @@
 *.un~
 Session.vim
 .netrwhist
-*
 
 ### Codenvy ###
 .codenvy
