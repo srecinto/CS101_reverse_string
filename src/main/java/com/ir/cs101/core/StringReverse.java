@@ -1,4 +1,4 @@
-package com.ir.cs101;
+package com.ir.cs101.core;
 
 /**
  * String reverse is a way to demonstrait a way to reverse a string i.e.

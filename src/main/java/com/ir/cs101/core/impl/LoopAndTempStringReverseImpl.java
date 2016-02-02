@@ -1,6 +1,6 @@
-package com.ir.cs101.impl;
+package com.ir.cs101.core.impl;
 
-import com.ir.cs101.StringReverse;
+import com.ir.cs101.core.StringReverse;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;

@@ -1,4 +1,4 @@
-package com.ir.cs101.impl;
+package com.ir.cs101.core.impl;
 
 import org.junit.Test;
 import org.junit.Assert;
