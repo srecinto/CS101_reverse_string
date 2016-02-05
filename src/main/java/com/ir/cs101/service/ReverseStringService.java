@@ -9,40 +9,40 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.ir.cs101.core.StringReverse;
 import com.ir.cs101.core.impl.StringReverseFactory;
+import com.ir.cs101.dto.StringReverseResponse;
 
 @Path("/stringreverse/")
 public class ReverseStringService {
   
   @GET
   @Path("/simple/{stringToReverse}")
-  @Produces(MediaType.TEXT_PLAIN)
+  @Produces(MediaType.APPLICATION_JSON)
   public Response getSimpleReverseOfString(@PathParam("stringToReverse") String stringToReverse) {
     
-    StringReverse sr = StringReverseFactory.GetSimpleStringReverse();
+    StringReverseResponse srr = new StringReverseResponse(stringToReverse, StringReverseFactory.GetSimpleStringReverse().reverse(stringToReverse));
     
-    return Response.status(200).entity(sr.reverse(stringToReverse)).build();
+    return Response.status(200).entity(srr).build();
   }
   
   @GET
   @Path("/recursive/{stringToReverse}")
-  @Produces(MediaType.TEXT_PLAIN)
+  @Produces(MediaType.APPLICATION_JSON)
   public Response getRecursiveReverseOfString(@PathParam("stringToReverse") String stringToReverse) {
     
-    StringReverse sr = StringReverseFactory.GetRecursiveStringReverse();
+    StringReverseResponse srr = new StringReverseResponse(stringToReverse, StringReverseFactory.GetRecursiveStringReverse().reverse(stringToReverse));
     
-    return Response.status(200).entity(sr.reverse(stringToReverse)).build();
+    return Response.status(200).entity(srr).build();
   }
   
   @GET
   @Path("/loop/{stringToReverse}")
-  @Produces(MediaType.TEXT_PLAIN)
+  @Produces(MediaType.APPLICATION_JSON)
   public Response getLoopAndTempReverseOfString(@PathParam("stringToReverse") String stringToReverse) {
     
-    StringReverse sr = StringReverseFactory.GetLoopAndTempStringReverse();
+    StringReverseResponse srr = new StringReverseResponse(stringToReverse, StringReverseFactory.GetLoopAndTempStringReverse().reverse(stringToReverse));
     
-    return Response.status(200).entity(sr.reverse(stringToReverse)).build();
+    return Response.status(200).entity(srr).build();
   }
   
   
